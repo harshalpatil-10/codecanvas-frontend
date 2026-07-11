@@ -39,7 +39,7 @@ export default function Signup() {
   return (
     <div className={styles.page}>
       <CanvasBackground />
-      <Link to="/" className={styles.brand}><Logo size={20} /> CodeCanvas</Link>
+      <Link to="/" className={styles.brand}><Logo size={50} /> CodeCanvas</Link>
 
       <div className={styles.card}>
         <h1 className={styles.title}>Create your account</h1>
