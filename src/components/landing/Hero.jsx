@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CanvasBackground from './CanvasBackground.jsx'
-import MagneticButton from './MagneticButton.jsx'
+//import MagneticButton from './MagneticButton.jsx'
 import RevealOnScroll from './RevealOnScroll.jsx'
 import styles from './Hero.module.css'
 
@@ -28,9 +28,13 @@ export default function Hero() {
 
         <RevealOnScroll delay={240}>
           <div className={styles.ctaRow}>
-            <MagneticButton as={Link} to="/signup" className="btn btn-primary" style={{ padding: '15px 30px', fontSize: '15px' }}>
-              Get Started — it's free →
-            </MagneticButton>
+            <Link
+  to="/signup"
+  className="btn btn-primary"
+  style={{ padding: '15px 30px', fontSize: '15px' }}
+>
+  Get Started →
+</Link>
             <a href="#features" className="btn btn-outline" style={{ padding: '15px 26px' }}>See how it works</a>
           </div>
         </RevealOnScroll>
