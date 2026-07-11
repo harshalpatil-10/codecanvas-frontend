@@ -66,8 +66,12 @@
 body { transition: background-color 0.35s ease, color 0.35s ease; }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: var(--paper); overscroll-behavior: none; }
-html, body, #root { min-height: 100%; }
+html {
+  scroll-behavior: smooth;
+  background: var(--paper);
+  overscroll-behavior: none;
+}
+html, body, #root { min-height: 100%; background: var(--paper); }
 
 body {
   margin: 0;
