@@ -10,11 +10,23 @@ export default function CTASection() {
       <div className="container">
         <RevealOnScroll>
           <div className={styles.box}>
-            <h2 className={styles.heading}>Your developer workspace starts here.</h2>
-            <p className={styles.sub}>Everything you need, in one canvas.</p>
-            <Link to="/signup" className="btn btn-primary" style={{ padding: '16px 34px', fontSize: '15.5px' }}>
-              Get Started →
-            </Link>
+            <h2 className={styles.heading}>
+  Every project ends.
+  <br />
+  The knowledge shouldn't.
+</h2>
+
+<p className={styles.sub}>
+  Build your developer workspace today.
+</p>
+
+<Link
+  to="/signup"
+  className="btn btn-primary"
+  style={{ padding: '16px 34px', fontSize: '15.5px' }}
+>
+  Get Started →
+</Link>
           </div>
         </RevealOnScroll>
       </div>
