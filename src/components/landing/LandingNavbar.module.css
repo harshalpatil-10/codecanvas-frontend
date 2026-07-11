@@ -5,7 +5,7 @@
   backface-visibility: hidden;
 }
 .nav.scrolled {
-  background: var(--nav-blur-bg); backdrop-filter: blur(14px);
+  background: var(--nav-blur-bg); 
   border-bottom: 1px solid var(--line); padding: 14px 0;
 }
 .inner {
