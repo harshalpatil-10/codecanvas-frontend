@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Logo from '../shared/Logo.jsx'
 import { useAuth } from '../../context/AuthContext.jsx'
-import { DashboardIcon, NoteIcon, SnippetIcon, SqlIcon, ApiIcon, SearchIcon, SettingsIcon, LogoutIcon } from '../shared/Icons.jsx'
+import { DashboardIcon, NoteIcon, SnippetIcon, SqlIcon, ApiIcon, SearchIcon, SettingsIcon, LogoutIcon ,SparkleIcon } from '../shared/Icons.jsx'
 import styles from './Sidebar.module.css'
 
 const ITEMS = [
@@ -12,6 +12,7 @@ const ITEMS = [
   { to: '/app/sql', label: 'SQL Playground', Icon: SqlIcon },
   { to: '/app/api-collection', label: 'API Collection', Icon: ApiIcon },
   { to: '/app/search', label: 'Search', Icon: SearchIcon },
+  { to: '/app/interview', label: 'AI Interview', Icon: SparkleIcon },
 ]
 
 export default function Sidebar({ open }) {
