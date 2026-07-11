@@ -23,7 +23,7 @@ export default function CTASection() {
 <Link
   to="/signup"
   className="btn btn-primary"
-  style={{ padding: '16px 34px', fontSize: '15.5px' }}
+  style={{ padding: "16px 36px", fontSize: "16px" }}
 >
   Get Started →
 </Link>
