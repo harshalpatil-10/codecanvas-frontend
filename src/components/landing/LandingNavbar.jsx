@@ -17,7 +17,7 @@ export default function LandingNavbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <Link to="/" className={styles.logo}>
-          <span className={styles.mark}><Logo size={100} /></span> CodeCanvas
+          <span className={styles.mark}><Logo size={50} /></span> CodeCanvas
         </Link>
         <div className={styles.links}>
           <a href="#features">Features</a>
