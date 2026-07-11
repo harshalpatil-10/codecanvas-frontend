@@ -34,7 +34,7 @@ export default function Login() {
   return (
     <div className={styles.page}>
       <CanvasBackground />
-      <Link to="/" className={styles.brand}><Logo size={100} /> CodeCanvas</Link>
+      <Link to="/" className={styles.brand}><Logo size={70} /> CodeCanvas</Link>
 
       <div className={styles.card}>
         <h1 className={styles.title}>Welcome back</h1>
