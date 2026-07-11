@@ -1,8 +1,19 @@
 .section { padding: 60px 0 120px; }
 .box {
-  background: linear-gradient(135deg, var(--accent), #3B82F6);
-  border-radius: 28px; padding: 72px 40px; text-align: center;
-  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #5B4CF5 0%, #5275F7 100%);
 }
-.heading { font-size: clamp(28px, 4.4vw, 42px); color: #FFFFFF; margin-bottom: 14px; }
-.sub { color: rgba(255,255,255,0.82); margin-bottom: 32px; font-size: 15px; }
+.heading {
+  font-size: clamp(30px, 4.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 620px;
+  margin: 0 auto 34px;
+}
