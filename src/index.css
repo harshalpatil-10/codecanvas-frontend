@@ -75,7 +75,7 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  color-scheme: light;
+  overscroll-behavior: none;
 }
 
 [data-theme="dark"] { color-scheme: dark; }
