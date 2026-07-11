@@ -1,12 +1,9 @@
 .nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 20px 0; transition: all 0.35s ease;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-.nav.scrolled {
-  background: var(--nav-blur-bg); 
-  border-bottom: 1px solid var(--line); padding: 14px 0;
+  padding: 14px 0;
+  background: var(--nav-blur-bg);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
 }
 .inner {
   max-width: 1160px; margin: 0 auto; padding: 0 32px;
