@@ -9,23 +9,19 @@ export default function CTASection() {
     <section className={styles.section}>
       <div className="container">
         <RevealOnScroll>
-  <h2 className={styles.heading}>
-    Every project ends.
-    <br />
-    The knowledge shouldn't.
-  </h2>
+  <div className={styles.content}>
+    <h2 className={styles.heading}>...</h2>
 
-  <p className={styles.sub}>
-    Never lose another solution you've already found.
-  </p>
+    <p className={styles.sub}>...</p>
 
-  <Link
-    to="/signup"
-    className="btn btn-primary"
-    style={{ padding: "16px 36px", fontSize: "16px" }}
-  >
-    Get Started →
-  </Link>
+    <Link
+      to="/signup"
+      className="btn btn-primary"
+      style={{ padding: "16px 36px", fontSize: "16px" }}
+    >
+      Get Started →
+    </Link>
+  </div>
 </RevealOnScroll>
       </div>
     </section>
