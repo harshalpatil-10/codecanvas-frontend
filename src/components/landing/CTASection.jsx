@@ -17,7 +17,7 @@ export default function CTASection() {
 </h2>
 
 <p className={styles.sub}>
-  Build your developer workspace today.
+  Never lose another solution you've already found.
 </p>
 
 <Link
