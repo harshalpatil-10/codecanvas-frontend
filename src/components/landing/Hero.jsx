@@ -11,7 +11,7 @@ export default function Hero() {
       <CanvasBackground />
       <div className={styles.content}>
         <RevealOnScroll>
-          <span className="badge badge-accent">The Developer's Second Brain</span>
+          <span className="badge badge-accent">Your Personal Dev Workspace</span>
         </RevealOnScroll>
 
         <RevealOnScroll delay={80}>
@@ -22,9 +22,7 @@ export default function Hero() {
 
         <RevealOnScroll delay={160}>
           <p className={styles.sub}>
-            Stop scattering your code across Notion, Gists, and sticky notes. CodeCanvas brings your
-            snippets, interview notes, SQL queries, and API references into one focused workspace —
-            with AI-powered revision built in.
+            Every project teaches you something. CodeCanvas helps you capture, organize, and revisit your snippets, interview notes, SQL queries, and API references—with AI-powered revision built in.
           </p>
         </RevealOnScroll>
 
