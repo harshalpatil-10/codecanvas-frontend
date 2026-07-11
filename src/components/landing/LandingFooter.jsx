@@ -7,7 +7,7 @@ export default function LandingFooter() {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.row}>
-          <span className={styles.logo}><Logo size={50} /> CodeCanvas</span>
+          <span className={styles.logo}><Logo size={20} /> CodeCanvas</span>
           <span className={styles.tag}>The Developer's Second Brain</span>
         </div>
         <div className={styles.bottom}>
