@@ -38,7 +38,7 @@ export default function Login() {
 
       <div className={styles.card}>
         <h1 className={styles.title}>Welcome back</h1>
-        <p className={styles.subtitle}>Log in to your second brain.</p>
+        <p className={styles.subtitle}>Sign in to your account. </p>
 
         <form onSubmit={handleSubmit}>
           <div className="formfield">
@@ -53,7 +53,7 @@ export default function Login() {
           {error && <p className="error" style={{ marginBottom: 14, fontSize: 13 }}>{error}</p>}
 
           <button type="submit" className="btn btn-primary" disabled={loading} style={{ width: '100%', padding: '13px 0' }}>
-            {loading ? 'Signing in...' : 'Log In'}
+            {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
 
