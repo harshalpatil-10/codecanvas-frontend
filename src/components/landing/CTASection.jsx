@@ -8,11 +8,17 @@ export default function CTASection() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <RevealOnScroll>
+       <RevealOnScroll>
   <div className={styles.content}>
-    <h2 className={styles.heading}>...</h2>
+    <h2 className={styles.heading}>
+      Every project ends.
+      <br />
+      The knowledge shouldn't.
+    </h2>
 
-    <p className={styles.sub}>...</p>
+    <p className={styles.sub}>
+      Never lose another solution you've already found.
+    </p>
 
     <Link
       to="/signup"
