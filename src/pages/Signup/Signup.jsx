@@ -43,20 +43,20 @@ export default function Signup() {
 
       <div className={styles.card}>
         <h1 className={styles.title}>Create your account</h1>
-        <p className={styles.subtitle}>Start building your second brain — free.</p>
+        <p className={styles.subtitle}>Build your developer workspace in minutes.</p>
 
         <form onSubmit={handleSubmit}>
           <div className="formfield">
             <label>Name</label>
-            <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="Harshal Patil" autoFocus />
+            <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder="John Doe" autoFocus />
           </div>
           <div className="formfield">
             <label>Email</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" />
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="johndoe@example.com" />
           </div>
           <div className="formfield">
             <label>Password</label>
-            <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="At least 6 characters" />
+            <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Minimum 6 characters" />
           </div>
 
           {error && <p className="error" style={{ marginBottom: 14, fontSize: 13 }}>{error}</p>}
