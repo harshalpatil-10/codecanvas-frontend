@@ -8,7 +8,7 @@ export default function LandingFooter() {
       <div className="container">
         <div className={styles.row}>
           <span className={styles.logo}><Logo size={20} /> CodeCanvas</span>
-          <span className={styles.tag}>The Developer's Second Brain</span>
+          <span className={styles.tag}>Your developer workspace starts here.</span>
         </div>
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} CodeCanvas</span>
