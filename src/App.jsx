@@ -10,6 +10,9 @@ import SqlPlayground from './pages/SqlPlayground/SqlPlayground.jsx'
 import ApiCollection from './pages/ApiCollection/ApiCollection.jsx'
 import Search from './pages/Search/Search.jsx'
 import Settings from './pages/Settings/Settings.jsx'
+import InterviewSetup from './pages/Interview/InterviewSetup.jsx'
+import InterviewSession from './pages/Interview/InterviewSession.jsx'
+import InterviewHistory from './pages/Interview/InterviewHistory.jsx'
 import NotFound from './pages/NotFound/NotFound.jsx'
 import AppLayout from './layouts/AppLayout.jsx'
 import ProtectedRoute from './components/app/ProtectedRoute.jsx'
@@ -29,6 +32,9 @@ export default function App() {
         <Route path="/app/api-collection" element={<ApiCollection />} />
         <Route path="/app/search" element={<Search />} />
         <Route path="/app/settings" element={<Settings />} />
+        <Route path="/app/interview" element={<InterviewSetup />} />
+        <Route path="/app/interview/session/:sessionId" element={<InterviewSession />} />
+        <Route path="/app/interview/history" element={<InterviewHistory />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
