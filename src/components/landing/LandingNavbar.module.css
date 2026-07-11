@@ -1,0 +1,25 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 20px 0; transition: all 0.35s ease;
+}
+.nav.scrolled {
+  background: var(--nav-blur-bg); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line); padding: 14px 0;
+}
+.inner {
+  max-width: 1160px; margin: 0 auto; padding: 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+  font-family: 'Fraunces', serif; font-weight: 600; font-size: 19px; color: var(--ink);
+  display: flex; align-items: center; gap: 8px;
+}
+.mark { color: var(--accent); display: flex; align-items: center; }
+.links { display: flex; gap: 32px; }
+.links a { font-size: 14px; font-weight: 500; color: var(--ink-soft); transition: color 0.2s ease; }
+.links a:hover { color: var(--ink); }
+.actions { display: flex; align-items: center; gap: 10px; }
+
+@media (max-width: 760px) {
+  .links { display: none; }
+}

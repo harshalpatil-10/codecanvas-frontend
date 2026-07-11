@@ -1,0 +1,33 @@
+.sidebar {
+  width: 232px; min-width: 232px; height: 100vh; position: sticky; top: 0;
+  background: var(--surface); border-right: 1px solid var(--line);
+  display: flex; flex-direction: column; padding: 24px 14px;
+}
+.logo { font-family: 'Fraunces', serif; font-weight: 600; font-size: 17px; padding: 0 10px 24px; display: flex; align-items: center; gap: 8px; color: var(--accent); }
+.logo svg { flex-shrink: 0; }
+.nav { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.item {
+  display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 10px;
+  font-size: 14px; font-weight: 500; color: var(--ink-soft); transition: all 0.15s ease;
+}
+.item:hover { background: var(--paper-2); color: var(--ink); }
+.item.active { background: var(--accent-dim); color: var(--accent); font-weight: 600; }
+.icon { width: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.footer { font-size: 11px; color: var(--ink-faint); padding: 12px 10px 0; border-top: 1px solid var(--line); margin-top: 12px; }
+
+.bottom { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px; display: flex; flex-direction: column; gap: 2px; }
+.profileRow {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; margin-top: 4px;
+}
+.avatar {
+  width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; flex-shrink: 0;
+}
+.profileName { flex: 1; font-size: 13.5px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.logoutBtn { background: none; border: none; color: var(--ink-faint); display: flex; align-items: center; flex-shrink: 0; }
+.logoutBtn:hover { color: var(--danger); }
+
+@media (max-width: 860px) {
+  .sidebar { position: fixed; left: 0; z-index: 200; transform: translateX(-100%); box-shadow: var(--shadow-lg); }
+  .sidebar.open { transform: translateX(0); }
+}

@@ -1,0 +1,13 @@
+.toggle { background: none; border: none; padding: 0; }
+.track {
+  width: 46px; height: 26px; border-radius: 999px; background: var(--paper-2);
+  border: 1px solid var(--line); display: flex; align-items: center; padding: 2px;
+  transition: background 0.3s ease;
+}
+.thumb {
+  width: 20px; height: 20px; border-radius: 50%; background: var(--surface); color: var(--ink-soft);
+  display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease); transform: translateX(0);
+}
+.track.dark { background: var(--accent-dim); }
+.track.dark .thumb { transform: translateX(20px); color: var(--accent); }

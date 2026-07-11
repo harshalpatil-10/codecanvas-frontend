@@ -1,0 +1,5 @@
+.page { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--paper); padding: 20px; text-align: center; }
+.content { max-width: 320px; }
+.mark { font-size: 30px; color: var(--accent); }
+.content h1 { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 700; margin: 10px 0 8px; }
+.content p { font-size: 14px; color: var(--ink-soft); margin-bottom: 24px; }

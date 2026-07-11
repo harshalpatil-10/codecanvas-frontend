@@ -1,0 +1,156 @@
+:root {
+  /* Premium warm-paper palette, no dark backgrounds */
+  --paper:      #FAF8F3;
+  --paper-2:    #F2EEE4;
+  --surface:    #FFFFFF;
+  --ink:        #18160F;
+  --ink-soft:   #55503F;
+  --ink-faint:  #8B8574;
+  --line:       #E7E1D2;
+  --line-soft:  #EFEADD;
+
+  --accent:      #4F46E5;
+  --accent-ink:  #FFFFFF;
+  --accent-dim:  #4F46E512;
+  --accent-dim2: #4F46E522;
+
+  --gold:       #C9962E;
+  --gold-dim:   #C9962E14;
+
+  --success:     #1F8A5C;
+  --success-dim: #1F8A5C14;
+  --danger:      #C2483A;
+  --danger-dim:  #C2483A14;
+
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 2px rgba(24,22,15,0.04), 0 1px 1px rgba(24,22,15,0.03);
+  --shadow:    0 8px 24px rgba(24,22,15,0.06), 0 2px 8px rgba(24,22,15,0.04);
+  --shadow-lg: 0 24px 64px rgba(24,22,15,0.14), 0 8px 24px rgba(24,22,15,0.08);
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --nav-blur-bg: rgba(250,248,243,0.82);
+}
+
+[data-theme="dark"] {
+  --paper:      #16151C;
+  --paper-2:    #1D1C25;
+  --surface:    #1F1E28;
+  --ink:        #F3F1EA;
+  --ink-soft:   #B8B4A8;
+  --ink-faint:  #706C60;
+  --line:       #2E2C38;
+  --line-soft:  #26242F;
+
+  --accent:      #8B7FFF;
+  --accent-ink:  #16151C;
+  --accent-dim:  #8B7FFF1c;
+  --accent-dim2: #8B7FFF33;
+
+  --gold:       #E0B054;
+  --gold-dim:   #E0B05420;
+
+  --success:     #4ADE9A;
+  --success-dim: #4ADE9A1c;
+  --danger:      #FF8A75;
+  --danger-dim:  #FF8A751c;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow:    0 8px 24px rgba(0,0,0,0.35);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.5);
+  --nav-blur-bg: rgba(22,21,28,0.82);
+}
+
+body { transition: background-color 0.35s ease, color 0.35s ease; }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--paper); }
+html, body, #root { min-height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  color-scheme: light;
+}
+
+[data-theme="dark"] { color-scheme: dark; }
+
+h1, h2, h3, h4, .display {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+p { color: var(--ink-soft); line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+input, textarea, select { font-family: inherit; }
+
+::selection { background: var(--accent-dim2); color: var(--ink); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-faint); }
+
+/* ---- shared premium primitives ---- */
+
+.container { max-width: 1160px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 700px) { .container { padding: 0 20px; } }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 24px; border-radius: 999px; border: 1px solid transparent;
+  font-weight: 600; font-size: 14.5px; font-family: 'Inter', sans-serif;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.2s ease, color 0.2s ease;
+  will-change: transform;
+}
+.btn-primary { background: var(--ink); color: var(--paper); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-accent { background: var(--accent); color: #fff; }
+.btn-accent:hover { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(79,70,229,0.28); }
+.btn-outline { background: transparent; border-color: var(--line); color: var(--ink); }
+.btn-outline:hover { border-color: var(--ink); transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--ink-soft); padding: 10px 16px; }
+.btn-ghost:hover { color: var(--ink); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none !important; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-sm); transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease), border-color 0.35s ease;
+}
+.card:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: #DCD5C2; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 11px;
+  border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.2px;
+}
+.badge-accent  { background: var(--accent-dim); color: var(--accent); }
+.badge-gold    { background: var(--gold-dim); color: var(--gold); }
+.badge-success { background: var(--success-dim); color: var(--success); }
+.badge-danger  { background: var(--danger-dim); color: var(--danger); }
+
+.formfield { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+.formfield label { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); }
+.formfield input, .formfield textarea, .formfield select {
+  padding: 12px 14px; border-radius: 10px; border: 1.5px solid var(--line);
+  background: var(--paper); color: var(--ink); font-size: 14.5px; outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.formfield input:focus, .formfield textarea:focus, .formfield select:focus {
+  border-color: var(--accent); background: var(--surface);
+}
+.formfield .error { color: var(--danger); font-size: 12px; }
+
+/* Scroll-reveal utility (toggled via IntersectionObserver in RevealOnScroll.jsx) */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* Magnetic button wrapper handles its own transform via inline style + JS */
