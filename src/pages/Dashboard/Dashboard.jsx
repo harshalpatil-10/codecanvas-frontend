@@ -23,13 +23,13 @@ export default function Dashboard() {
       try {
         setLoading(true)
         const [s, t, interviews] = await Promise.all([
-  dashboardService.getStats(),
-  dashboardService.getTimeline(),
-  interviewService.getHistory(),
-])
-const completed = interviews.filter(i => i.status === 'COMPLETED')
-const avg = completed.length > 0 ? completed.reduce((sum, i) => sum + i.overallScore, 0) / completed.length : 0
-setInterviewStats({ count: interviews.length, avgScore: avg })
+          dashboardService.getStats(),
+          dashboardService.getTimeline(),
+          interviewService.getHistory(),
+        ])
+        const completed = interviews.filter(i => i.status === 'COMPLETED')
+        const avg = completed.length > 0 ? completed.reduce((sum, i) => sum + i.overallScore, 0) / completed.length : 0
+        setInterviewStats({ count: interviews.length, avgScore: avg })
         setStats(s)
         setTimeline(t)
         setError('')
@@ -67,15 +67,13 @@ setInterviewStats({ count: interviews.length, avgScore: avg })
         <StatCard label="SQL Queries" value={stats?.totalSqlQueries ?? 0} icon={<SqlIcon />} tone="accent" />
         <StatCard label="Revision Due" value={stats?.revisionDue ?? 0} icon={<TimelineIcon />} tone="gold" />
         <StatCard label="Interviews Taken" value={interviewStats.count} icon={<SparkleIcon />} tone="accent" />
-
       </div>
 
-      <div className={styles.midRow}>
-        <div className={`card ${styles.distCard}`}>
-          <h3 className={styles.cardHeading}>Content Distribution</h3>
-          <p className={styles.cardSub}>How your knowledge is spread across the canvas.</p>
-          <DistributionBar segments={segments} />
-        </div>
+      <div className={`card ${styles.distCard}`}>
+        <h3 className={styles.cardHeading}>Content Distribution</h3>
+        <p className={styles.cardSub}>How your knowledge is spread across the canvas.</p>
+        <DistributionBar segments={segments} />
+      </div>
 
       <div className={`card ${styles.timelineCard}`}>
         <div className={styles.timelineHeader}>
