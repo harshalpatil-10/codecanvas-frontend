@@ -16,6 +16,7 @@ import InterviewHistory from './pages/Interview/InterviewHistory.jsx'
 import NotFound from './pages/NotFound/NotFound.jsx'
 import AppLayout from './layouts/AppLayout.jsx'
 import ProtectedRoute from './components/app/ProtectedRoute.jsx'
+import VerifyOtp from './pages/VerifyOtp/VerifyOtp.jsx'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/verify-otp" element={<VerifyOtp />} />
 
       <Route element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
         <Route path="/app" element={<Dashboard />} />
