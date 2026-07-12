@@ -4,6 +4,7 @@ import { useAuth } from '../../context/AuthContext.jsx'
 import CanvasBackground from '../../components/landing/CanvasBackground.jsx'
 import Logo from '../../components/shared/Logo.jsx'
 import styles from '../Login/Login.module.css'
+import { authService } from '../../services/authService.js'
 
 export default function Signup() {
   const { register } = useAuth()
