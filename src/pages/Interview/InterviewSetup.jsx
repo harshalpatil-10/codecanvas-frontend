@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import Loader from '../../components/app/Loader.jsx'
 import { noteService } from '../../services/noteService.js'
 import { snippetService } from '../../services/snippetService.js'
@@ -22,6 +22,7 @@ export default function InterviewSetup() {
   const [difficulty, setDifficulty] = useState('Intermediate')
   const [interviewType, setInterviewType] = useState('Technical')
   const [questionCount, setQuestionCount] = useState(5)
+  const [recentSessions, setRecentSessions] = useState([])
 
   useEffect(() => { load() }, [])
 
