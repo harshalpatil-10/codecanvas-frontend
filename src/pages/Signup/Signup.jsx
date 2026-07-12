@@ -28,8 +28,8 @@ export default function Signup() {
   }
   setLoading(true)
   try {
-    await authService.register({ name: name.trim(), email: email.trim(), password })
-    navigate('/verify-otp', { state: { email: email.trim() } })
+    await register(name.trim(), email.trim(), password)
+    navigate('/app')
   } catch (err) {
     setError(err.message || 'Could not create account.')
   } finally {
