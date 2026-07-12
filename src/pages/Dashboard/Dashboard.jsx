@@ -4,11 +4,12 @@ import Loader from '../../components/app/Loader.jsx'
 import EmptyState from '../../components/app/EmptyState.jsx'
 import DistributionBar from '../../components/app/DistributionBar.jsx'
 import RevisionRing from '../../components/app/RevisionRing.jsx'
-import { SnippetIcon, NoteIcon, ApiIcon, SqlIcon, TimelineIcon } from '../../components/shared/Icons.jsx'
+import { SnippetIcon, NoteIcon, ApiIcon, SqlIcon, TimelineIcon, SparkleIcon } from '../../components/shared/Icons.jsx'
 import { dashboardService } from '../../services/dashboardService.js'
 import { useAuth } from '../../context/AuthContext.jsx'
 import { formatRelative } from '../../utils/dateUtils.js'
 import styles from './Dashboard.module.css'
+import { interviewService } from '../../services/interviewService.js'
 
 export default function Dashboard() {
   const { user } = useAuth()
@@ -16,12 +17,20 @@ export default function Dashboard() {
   const [timeline, setTimeline] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [interviewStats, setInterviewStats] = useState({ count: 0, avgScore: 0 })
 
   useEffect(() => {
     async function load() {
       try {
         setLoading(true)
-        const [s, t] = await Promise.all([dashboardService.getStats(), dashboardService.getTimeline()])
+        const [s, t, interviews] = await Promise.all([
+  dashboardService.getStats(),
+  dashboardService.getTimeline(),
+  interviewService.getHistory(),
+])
+const completed = interviews.filter(i => i.status === 'COMPLETED')
+const avg = completed.length > 0 ? completed.reduce((sum, i) => sum + i.overallScore, 0) / completed.length : 0
+setInterviewStats({ count: interviews.length, avgScore: avg })
         setStats(s)
         setTimeline(t)
         setError('')
@@ -60,6 +69,8 @@ export default function Dashboard() {
         <StatCard label="API Requests" value={stats?.totalApis ?? 0} icon={<ApiIcon />} tone="accent" />
         <StatCard label="SQL Queries" value={stats?.totalSqlQueries ?? 0} icon={<SqlIcon />} tone="accent" />
         <StatCard label="Revision Due" value={stats?.revisionDue ?? 0} icon={<TimelineIcon />} tone="gold" />
+        <StatCard label="Interviews Taken" value={interviewStats.count} icon={<SparkleIcon />} tone="accent" />
+
       </div>
 
       <div className={styles.midRow}>
