@@ -3,7 +3,6 @@ import StatCard from '../../components/app/StatCard.jsx'
 import Loader from '../../components/app/Loader.jsx'
 import EmptyState from '../../components/app/EmptyState.jsx'
 import DistributionBar from '../../components/app/DistributionBar.jsx'
-import RevisionRing from '../../components/app/RevisionRing.jsx'
 import { SnippetIcon, NoteIcon, ApiIcon, SqlIcon, TimelineIcon, SparkleIcon } from '../../components/shared/Icons.jsx'
 import { dashboardService } from '../../services/dashboardService.js'
 import { useAuth } from '../../context/AuthContext.jsx'
@@ -45,8 +44,6 @@ setInterviewStats({ count: interviews.length, avgScore: avg })
 
   if (loading) return <Loader label="Loading your dashboard..." />
 
-  const totalItems = (stats?.totalSnippets ?? 0) + (stats?.totalNotes ?? 0) + (stats?.totalApis ?? 0) + (stats?.totalSqlQueries ?? 0)
-
   const segments = [
     { label: 'Snippets', value: stats?.totalSnippets ?? 0, color: 'var(--accent)' },
     { label: 'Notes', value: stats?.totalNotes ?? 0, color: 'var(--gold)' },
@@ -79,15 +76,6 @@ setInterviewStats({ count: interviews.length, avgScore: avg })
           <p className={styles.cardSub}>How your knowledge is spread across the canvas.</p>
           <DistributionBar segments={segments} />
         </div>
-
-        <div className={`card ${styles.ringCard}`}>
-          <h3 className={styles.cardHeading}>Revision Health</h3>
-          <RevisionRing due={stats?.revisionDue ?? 0} total={totalItems} />
-          <p className={styles.ringNote}>
-            {stats?.revisionDue ? `${stats.revisionDue} item${stats.revisionDue !== 1 ? 's' : ''} need revisiting` : 'Everything is fresh'}
-          </p>
-        </div>
-      </div>
 
       <div className={`card ${styles.timelineCard}`}>
         <div className={styles.timelineHeader}>
