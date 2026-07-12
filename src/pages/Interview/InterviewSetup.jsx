@@ -27,16 +27,22 @@ export default function InterviewSetup() {
   useEffect(() => { load() }, [])
 
   async function load() {
-    try {
-      setLoading(true)
-      const [n, s, q] = await Promise.all([noteService.getAll(), snippetService.getAll(), sqlService.getAll()])
-      setNotes(n); setSnippets(s); setSqlQueries(q)
-    } catch (err) {
-      setError(err.message)
-    } finally {
-      setLoading(false)
-    }
+  try {
+    setLoading(true)
+    const [n, s, q, history] = await Promise.all([
+      noteService.getAll(),
+      snippetService.getAll(),
+      sqlService.getAll(),
+      interviewService.getHistory(),
+    ])
+    setNotes(n); setSnippets(s); setSqlQueries(q)
+    setRecentSessions(history.slice(0, 3))
+  } catch (err) {
+    setError(err.message)
+  } finally {
+    setLoading(false)
   }
+}
 
   function toggle(list, setList, id) {
     setList(list.includes(id) ? list.filter(x => x !== id) : [...list, id])
@@ -71,6 +77,22 @@ export default function InterviewSetup() {
     <div className={styles.wrap}>
       <h1 className={styles.title}>🎯 AI Interview Setup</h1>
       <p className={styles.subtitle}>Select the content you want to be quizzed on — CodeCanvas builds a fresh interview from it every time.</p>
+      {recentSessions.length > 0 && (
+  <div className={`card ${styles.section}`}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+      <h3 className={styles.sectionTitle} style={{ marginBottom: 0 }}>Recent Interviews</h3>
+      <Link to="/app/interview/history" className="btn btn-outline" style={{ padding: '6px 14px', fontSize: 12.5 }}>View All</Link>
+    </div>
+    <div className={styles.checkGrid}>
+      {recentSessions.map(s => (
+        <div key={s.id} className={styles.checkItem} style={{ justifyContent: 'space-between' }}>
+          <span>{s.interviewType} · {s.difficulty}</span>
+          <span className={styles.tag}>{s.status === 'COMPLETED' ? `${(s.overallScore * 10).toFixed(0)}%` : 'In Progress'}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
 
       {error && <div className={styles.errorBanner}>{error}</div>}
 
