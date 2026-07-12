@@ -7,13 +7,9 @@
 @media (max-width: 1000px) { .statGrid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 600px) { .statGrid { grid-template-columns: repeat(2, 1fr); } }
 
-.midRow { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 20px; }
-@media (max-width: 760px) { .midRow { grid-template-columns: 1fr; } }
-.distCard, .ringCard { padding: 22px 24px; }
-.ringCard { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.distCard { padding: 22px 24px; margin-bottom: 20px; }
 .cardHeading { font-size: 15px; margin-bottom: 4px; }
 .cardSub { font-size: 12.5px; color: var(--ink-faint); margin-bottom: 20px; }
-.ringNote { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; }
 
 .timelineCard { padding: 24px 26px; }
 .timelineHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
