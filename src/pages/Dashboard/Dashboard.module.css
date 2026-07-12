@@ -3,7 +3,7 @@
 .subtitle { font-size: 14px; color: var(--ink-soft); }
 .errorBanner { background: var(--danger-dim); color: var(--danger); padding: 10px 14px; border-radius: 10px; font-size: 13px; margin-bottom: 16px; }
 
-.statGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 28px; }
+.statGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px; }
 @media (max-width: 1000px) { .statGrid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 600px) { .statGrid { grid-template-columns: repeat(2, 1fr); } }
 
