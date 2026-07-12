@@ -15,26 +15,26 @@ export default function Signup() {
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e) {
-    e.preventDefault()
-    setError('')
-    if (!name.trim() || !email.trim() || !password.trim()) {
-      setError('Please fill in all fields.')
-      return
-    }
-    if (password.length < 6) {
-      setError('Password must be at least 6 characters.')
-      return
-    }
-    setLoading(true)
-    try {
-      await register(name.trim(), email.trim(), password)
-      navigate('/app')
-    } catch (err) {
-      setError(err.message || 'Could not create account.')
-    } finally {
-      setLoading(false)
-    }
+  e.preventDefault()
+  setError('')
+  if (!name.trim() || !email.trim() || !password.trim()) {
+    setError('Please fill in all fields.')
+    return
   }
+  if (password.length < 6) {
+    setError('Password must be at least 6 characters.')
+    return
+  }
+  setLoading(true)
+  try {
+    await authService.register({ name: name.trim(), email: email.trim(), password })
+    navigate('/verify-otp', { state: { email: email.trim() } })
+  } catch (err) {
+    setError(err.message || 'Could not create account.')
+  } finally {
+    setLoading(false)
+  }
+}
 
   return (
     <div className={styles.page}>
