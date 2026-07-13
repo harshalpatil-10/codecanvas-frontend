@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../components/app/Sidebar.jsx'
 import Topbar from '../components/app/Topbar.jsx'
+import CanvasAiWidget from '../components/app/CanvasAiWidget.jsx'
 import styles from './AppLayout.module.css'
 
 export default function AppLayout() {
@@ -16,6 +17,7 @@ export default function AppLayout() {
           <Outlet />
         </div>
       </div>
+      <CanvasAiWidget />
     </div>
   )
 }
