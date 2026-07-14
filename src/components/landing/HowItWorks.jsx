@@ -4,8 +4,8 @@ import styles from './HowItWorks.module.css'
 
 const STEPS = [
   { n: '01', title: 'Save anything', desc: 'A snippet, a note, a query, an API call — drop it in as you learn.' },
-  { n: '02', title: 'It organizes itself', desc: 'Everything is tagged, timestamped, and searchable automatically.' },
-  { n: '03', title: 'Revisit with purpose', desc: 'CodeCanvas reminds you what to revisit — and quizzes you on it.' },
+  { n: '02', title: 'Ask Canvas AI', desc: 'Chat with your own knowledge — it retrieves the right content before answering.' },
+  { n: '03', title: 'Practice for real', desc: 'Take an AI mock interview built from your notes, or get quizzed on what\'s overdue.' },
 ]
 
 export default function HowItWorks() {
