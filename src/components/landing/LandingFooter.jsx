@@ -8,11 +8,17 @@ export default function LandingFooter() {
       <div className="container">
         <div className={styles.row}>
           <span className={styles.logo}><Logo size={50}/><span><span>Code</span><span style={{ color: 'var(--accent)' }}>Canvas</span></span></span>
-          <span className={styles.tag}>Your developer workspace starts here.</span>
         </div>
         <div className={styles.bottom}>
           <span>© {new Date().getFullYear()} CodeCanvas</span>
-          <a href="https://github.com/harshalpatil-10" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <div className={styles.rightGroup}>
+            <span className={styles.credit}>Designed &amp; Developed by <span className={styles.name}>Harshal Patil</span></span>
+            <div className={styles.links}>
+              <a href="https://github.com/harshalpatil-10" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/harshalpatil5/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="mailto:patilharshal39730@gmail.com">Email</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
