@@ -3,7 +3,7 @@
   position: relative; padding: 24px;
 }
 .brand {
-  position: absolute; top: 28px; left: 32px; font-family: 'Fraunces', serif; font-weight: 600;
+  position: absolute; top: 28px; left: 32px; font-family: 'Sora', sans-serif; font-weight: 600;
   font-size: 17px; z-index: 2; color: var(--ink); display: flex; align-items: center; gap: 8px;
 }
 .brand svg { color: var(--accent); }
