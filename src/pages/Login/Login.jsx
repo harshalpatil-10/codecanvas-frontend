@@ -34,7 +34,7 @@ export default function Login() {
   return (
     <div className={styles.page}>
       <CanvasBackground />
-      <Link to="/" className={styles.brand}><Logo size={50} /><span>Code</span><span style={{ color: 'var(--accent)' }}>Canvas</span></Link>
+      <Link to="/" className={styles.brand}><Logo size={50} /><span><span>Code</span><span style={{ color: 'var(--accent)' }}>Canvas</span></span></Link>
 
       <div className={styles.card}>
         <h1 className={styles.title}>Welcome back</h1>
