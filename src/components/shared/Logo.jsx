@@ -1,5 +1,5 @@
 import React from 'react'
-import logoImg from '../../assets/logoneww.png'
+import logoImg from '../../assets/logo1.png'
 
 export default function Logo({ size = 22 }) {
   return (
