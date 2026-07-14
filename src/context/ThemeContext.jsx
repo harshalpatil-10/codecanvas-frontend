@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => localStorage.getItem('codecanvas_theme') || 'light')
+  const [theme] = useState('light')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
