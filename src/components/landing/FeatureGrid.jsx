@@ -3,8 +3,8 @@ import RevealOnScroll from './RevealOnScroll.jsx'
 import styles from './FeatureGrid.module.css'
 
 const FEATURES = [
-  { icon: '✨', title: 'Canvas AI', desc: 'Chat with your own saved content — it retrieves the right notes before answering, not just generic AI replies.' },
-  { icon: '🎯', title: 'AI Mock Interview', desc: 'A real, adaptive interview built entirely from your notes and snippets — it follows up when you answer weak.' },
+  { icon: '✨︎', title: 'Canvas AI', desc: 'Chat with your own saved content — it retrieves the right notes before answering, not just generic AI replies.' },
+  { icon: '🗪', title: 'AI Mock Interview', desc: 'A real, adaptive interview built entirely from your notes and snippets — it follows up when you answer weak.' },
   { icon: '⌘', title: 'Code Snippets', desc: 'Save reusable code with language, difficulty, and tags — rendered with real syntax highlighting.' },
   { icon: '✎', title: 'Interview Notes', desc: 'Markdown notes organized by topic — Java, Spring, SQL, AWS, all in one place.' },
   { icon: '⇄', title: 'API Collection', desc: 'A personal Postman — save requests, headers, and example responses for reference.' },
