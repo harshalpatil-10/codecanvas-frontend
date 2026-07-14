@@ -9,15 +9,16 @@ export default function AiHighlight() {
         <div className={styles.wrap}>
           <RevealOnScroll className={styles.textCol}>
             <span className="badge badge-gold">✨ AI-Powered</span>
-            <h2 className={styles.heading}>Revision that actually happens.</h2>
+            <h2 className={styles.heading}>AI that actually knows your content.</h2>
             <p className={styles.desc}>
-              CodeCanvas quietly tracks when you last revisited a note. When something's overdue,
-              it doesn't just nag you — it generates a short quiz from your own notes using Gemini,
-              so revision becomes active recall instead of a guilty popup.
+            Canvas AI retrieves your most relevant saved notes, snippets, and queries before answering —
+            so responses are grounded in what you've actually written, not just generic model knowledge.
+            The same retrieval powers auto-generated quizzes and a fully adaptive mock interview.
             </p>
             <ul className={styles.list}>
-              <li><span>◷</span> Background scheduler checks revision status automatically</li>
-              <li><span>✨</span> AI-generated quiz questions from your real content</li>
+              <li><span>✨</span> Canvas AI chat — retrieval-grounded answers from your own content</li>
+              <li><span>🎯</span> Adaptive mock interviews that follow up on weak answers</li>
+              <li><span>◷</span> Background scheduler flags content overdue for revision</li>
               <li><span>⇄</span> Optimistic locking keeps concurrent edits safe</li>
             </ul>
           </RevealOnScroll>
