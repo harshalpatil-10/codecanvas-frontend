@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../shared/Logo.jsx'
-import ThemeToggle from '../shared/ThemeToggle.jsx'
 import styles from './LandingNavbar.module.css'
 
 export default function LandingNavbar() {
@@ -25,7 +24,6 @@ export default function LandingNavbar() {
           <a href="#ai">AI Revision</a>
         </div>
         <div className={styles.actions}>
-          <ThemeToggle />
           <Link to="/login" className="btn btn-ghost">Log in</Link>
           <Link to="/signup" className="btn btn-primary">Get Started</Link>
         </div>
