@@ -3,7 +3,7 @@
   background: var(--surface); border-right: 1px solid var(--line);
   display: flex; flex-direction: column; padding: 24px 14px;
 }
-.logo { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 17px; padding: 0 10px 24px; display: flex; align-items: center; gap: 5px; color: var(--ink); }
+.logo { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 17px; padding: 0 10px 24px; display: flex; align-items: center; gap: 1px; color: var(--ink); }
 .logo svg { flex-shrink: 0; }
 .nav { display: flex; flex-direction: column; gap: 2px; flex: 1; }
 .item {
