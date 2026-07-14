@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ThemeToggle from '../shared/ThemeToggle.jsx'
 import { MenuIcon, SearchIcon } from '../shared/Icons.jsx'
 import styles from './Topbar.module.css'
 
@@ -42,7 +41,6 @@ export default function Topbar({ onMenuClick }) {
       </form>
 
       <div className={styles.spacer} />
-      <ThemeToggle />
     </header>
   )
 }
