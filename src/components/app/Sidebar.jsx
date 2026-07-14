@@ -26,7 +26,7 @@ export default function Sidebar({ open }) {
 
   return (
     <aside className={`${styles.sidebar} ${open ? styles.open : ''}`}>
-      <div className={styles.logo}><Logo size={50} /> CodeCanvas</div>
+      <div className={styles.logo}><Logo size={26} /> <span>Code</span><span style={{ color: 'var(--accent)' }}>Canvas</span></div>
       <nav className={styles.nav}>
         {ITEMS.map(item => (
           <NavLink
