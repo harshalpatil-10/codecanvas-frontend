@@ -7,7 +7,7 @@ export default function LandingFooter() {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.row}>
-          <span className={styles.logo}><Logo size={20} /> <span>Code</span><span style={{ color: 'var(--accent)' }}>Canvas</span></span>
+          <span className={styles.logo}><Logo size={20} /><span>Code</span><span style={{ color: 'var(--accent)' }}>Canvas</span></span>
           <span className={styles.tag}>Your developer workspace starts here.</span>
         </div>
         <div className={styles.bottom}>
