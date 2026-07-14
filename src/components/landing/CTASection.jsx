@@ -11,13 +11,13 @@ export default function CTASection() {
        <RevealOnScroll>
   <div className={styles.content}>
     <h2 className={styles.heading}>
-      Every project ends.
+      Your entire dev workspace,
       <br />
-      The knowledge shouldn't.
+      one AI conversation away.
     </h2>
 
     <p className={styles.sub}>
-      Never lose another solution you've already found.
+      Snippets, notes, SQL, and APIs — searchable, revisable, and now, chattable.
     </p>
 
     <Link
