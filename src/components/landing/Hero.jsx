@@ -22,7 +22,7 @@ export default function Hero() {
 
         <RevealOnScroll delay={160}>
           <p className={styles.sub}>
-            Every project teaches you something. CodeCanvas helps you capture, organize, and revisit your snippets, interview notes, SQL queries, and API references—with AI-powered revision built in.
+            CodeCanvas brings your snippets, notes, SQL queries, and API references into one workspace — then lets you chat with your own knowledge, get quizzed on it, and even take a mock interview built entirely from what you've saved.
           </p>
         </RevealOnScroll>
 
