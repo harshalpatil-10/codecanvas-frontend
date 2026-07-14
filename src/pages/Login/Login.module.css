@@ -4,7 +4,7 @@
 }
 .brand {
   position: absolute; top: 28px; left: 32px; font-family: 'Sora', sans-serif; font-weight: 600;
-  font-size: 17px; z-index: 2; color: var(--ink); display: flex; align-items: center; gap: 8px;
+  font-size: 17px; z-index: 2; color: var(--ink); display: flex; align-items: center; gap: 5px;
 }
 .brand svg { color: var(--accent); }
 .card {
